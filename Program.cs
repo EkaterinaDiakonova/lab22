@@ -319,15 +319,29 @@
 // }
 
 
+// Console.WriteLine("Задача А");
 
-Console.WriteLine("Задача А");
+// Dictionary<string, int> studentScores = new Dictionary<string, int>
+// {
+//     { "Анна", 90 },
+//     { "Иван", 75 },
+//     { "Олег", 82 }
+// };
+// studentScores.Add("Мария", 95);
+// Console.WriteLine($"Оценка Анны: {studentScores["Анна"]}");
+// Console.WriteLine($"Количество записей: {studentScores.Count}");
 
-Dictionary<string, int> studentScores = new Dictionary<string, int>
+Console.WriteLine("Вариант 8");
+List<int> numbers = new List<int>
 {
-    { "Анна", 90 },
-    { "Иван", 75 },
-    { "Олег", 82 }
+    5, 10, 5, 15, 10, 20, 5
 };
-studentScores.Add("Мария", 95);
-Console.WriteLine($"Оценка Анны: {studentScores["Анна"]}");
-Console.WriteLine($"Количество записей: {studentScores.Count}");
+
+HashSet<int> uniqueNumbers = new HashSet<int>(numbers);
+Console.WriteLine($"Количество элементов ДО удаления повторов: {numbers.Count}");
+Console.WriteLine($"Количество уникальных значений ПОСЛЕ преобразования: {uniqueNumbers.Count}");
+Console.Write("Уникальные значения: ");
+foreach (int num in uniqueNumbers)
+{
+    Console.Write(num + " ");
+}
